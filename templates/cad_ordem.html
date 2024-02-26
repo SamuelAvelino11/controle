@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ordem de Producão</title>
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/static/css/StyleOrder.css">
+</head>
+<body>
+<h1 class="title1">Ordem De Produção</h1>
+<div class="container">
+    <h2>Ordem de Producão</h2>
+    <form>
+         {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col">
+                <select class="form-select" aria-label="Operador">
+                     <option selected>Operadores</option>
+                     <option value="1">Jose</option>
+                     <option value="2">Joao</option>
+                     <option value="3">Lucas</option>
+                </select>
+            </div>
+            <div class="col">
+                <select class="form-select" aria-label="Setor">
+                     <option selected>Setor</option>
+                     <option value="1">Voluta</option>
+                     <option value="2">Reta</option>
+                     <option value="3">Cotovelo</option>
+                </select>
+            </div>
+        </div>
+    <div id="inputsContainer">
+        <div class="row mb-3">
+           <div class="col">
+                <input type="text" class="form-control" name="peca" placeholder="Peca">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" name="cor" placeholder="Cor">
+            </div>
+            <div class="col">
+                <input type="number" class="form-control" name="qtd" placeholder="quantidade">
+            </div>
+            <div class="col">
+            <button type="button" onclick="adicionarCampos()">+</button>
+           </div>
+
+        </div>
+    </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</div>
+
+
+<script src="/static/js/scriptOne.js"></script>
+</body>
+</html>

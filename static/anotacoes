@@ -1,0 +1,36 @@
+links:
+https://github.com/rafegal/agenda/blob/master/templates/historico.html
+https://chat.openai.com/c/fe6a4cbf-1f00-445d-9a33-a7a982cba052
+https://getbootstrap.com/docs/5.0/forms/checks-radios/
+https://github.com/Vicrrs/barcode_and_qrcode_reader/tree/main/DataSet/imgs
+
+Para criar uma app django é necessario primerio criar uma virtualvenv.
+Depois precisa acessar o arquivo activate:
+Se for no git bash: ./Scripts/activate
+Depois instale o django: pip install django
+Depois crie uma pasta onde deseja criar o projeto
+Depois de acessar a pasta criada digite o comando: django-admin startproject nome_do_projeto
+Para startar é necessario usar o comando: django-admin startapp core
+para criar tabelas va no terminal e execute: python manage.py migrate
+para criar uma acesso a pagina de admin do banco de dados: python manage.py createsuperuser --username admin
+em seguida crie um email: Email address: admin@agenda.com.br
+depois crie uma senha
+para criar os models do app va na class model e digite:
+class name_table(models.Model):
+	atribute = models.typeAtribute(parameters)
+
+logo em seguida para habilitar a criacao de tabelas va no terminal e digite:
+python manage.py makemigrations core
+e para fazer a migracao é necessario passar o camando: python manage.py sqlmigrate core 0001
+ para definir o nome da tabela manualmente basta digitar na class models.py:
+    class Meta:
+        db_table = 'evento'
+seguindo a identacão da class Evento
+
+para fazer a migracão use o comando:
+	python manage.py migrate core 0001
+depois para verificar pela tela de admin va no admin.py
+e digite: admin.site.register(Evento)
+
+
+
